@@ -10,16 +10,19 @@ Veja a especificação detalhada do projeto na [página da disciplina](https://w
 ## Descrição do Projeto
 
 - Descrição geral do seu projeto:
+
 O projeto consiste na implementação de um simulador básico do processador RISC-V, mais especificamente da versão RV32IM, que corresponde à arquitetura de 32 bits com suporte a instruções básicas de aritmética e operações de multiplicação.
 O objetivo principal é compreender melhor a operação de processadores, focando na simulação de instruções e na análise de desempenho do processador.
 
 - Descrição do seu ambiente de desenvolvimento:
+  
 Virtual Box para gerar Máquina Virtual com Ubuntu 22 e GCC
 RISC-V GNU Compiler Toolchain para de códigos C gerar Assembly e Binários para o RV32IM.
- https://github.com/riscv-collab/riscv-gnu-toolchain
- Também usei o compilador ANSI-C LabWindows/CVI para testes no PC com Windows 10.
+https://github.com/riscv-collab/riscv-gnu-toolchain
+Também usei o compilador ANSI-C LabWindows/CVI para testes no PC com Windows 10.
 
 - Descrição do seu algoritmo de simulação
+  
 A aplicação carrega arquivo com código binário em vetor de instruções.
 Aloca recursos necessário para simulação do Core (RV32IM) e ringbuffer para salvar informações para o log conforme requisitos do projeto. Atualmente buffer esta fixado em 100 instruções para log, mas valor pode ser configurado.
 Rotina executa instrução por instrução, passando pelos processos básicos de load, decode e execute, copiando dados relevantes para o log no ringbuffer:
@@ -32,6 +35,7 @@ Os scripts "rv32im_asm2bin.sh" e "rv32im_c2bin.sh" foram criados para compilar c
 
 
 - Descrição de como você testou seu projeto
+  
 Os códigos do ACStone (031.add, 032.add, 033.add, 051.mul, 052.mul, 053.mul e 054.mul) foram compilados utilizando o script "rv32im_c2bin.sh" (por exemplo: ./rv32im_c2bin.sh 031.add, obs: não colocar a extenção ".c").
 E rodados no simulador com o comando "./riscv_sim *,bin"
 
