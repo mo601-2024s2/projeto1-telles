@@ -16,9 +16,9 @@ O objetivo principal é compreender melhor a operação de processadores, focand
 
 - Descrição do seu ambiente de desenvolvimento:
   
-Virtual Box para gerar Máquina Virtual com Ubuntu 22 e GCC
-RISC-V GNU Compiler Toolchain para de códigos C gerar Assembly e Binários para o RV32IM.
-https://github.com/riscv-collab/riscv-gnu-toolchain
+Virtual Box para gerar Máquina Virtual com Ubuntu 22 e GCC;
+RISC-V GNU Compiler Toolchain para de códigos C gerar Assembly e Binários para o RV32IM;
+https://github.com/riscv-collab/riscv-gnu-toolchain ;
 Também usei o compilador ANSI-C LabWindows/CVI para testes no PC com Windows 10.
 
 - Descrição do seu algoritmo de simulação
@@ -37,7 +37,7 @@ Os scripts "rv32im_asm2bin.sh" e "rv32im_c2bin.sh" foram criados para compilar c
 - Descrição de como você testou seu projeto
   
 Os códigos do ACStone (031.add, 032.add, 033.add, 051.mul, 052.mul, 053.mul e 054.mul) foram compilados utilizando o script "rv32im_c2bin.sh" (por exemplo: ./rv32im_c2bin.sh 031.add, obs: não colocar a extenção ".c").
-E rodados no simulador com o comando "./riscv_sim *,bin"
+E rodados no simulador com o comando "./riscv_sim *.bin"
 
 - Considerações gerais sobre seu aprendizado nesse projeto
 O desenvolvimento de um simulador de processador RISC-V, que segue a filosofia "Reduced Instruction Set Computer", foi fundamental para o entendimento dos conceitos de arquitetura de computadores, sistemas embarcados e simulação.
